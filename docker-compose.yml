@@ -1,0 +1,44 @@
+version: '3.7'
+services:
+  api:
+    build: 'services/api/.'
+    ports:
+      - '8082:8082'
+    environment:
+      MONGO_CONNECTION_STRING: 'mongodb://mongo:27017/shows'
+      PORT: 8082
+    depends_on:
+      - mongo
+    links:
+      - mongo
+
+  scraper:
+    build: 'services/scraper/.'
+    ports:
+      - '8081:8081'
+    environment:
+      MONGO_CONNECTION_STRING: 'mongodb://mongo:27017/shows'
+      PORT: 8081
+    depends_on:
+      - mongo
+    links:
+      - mongo
+
+  nginx:
+    build: '.'
+    ports:
+      - '80:8080'
+      - '443:443'
+    depends_on:
+      - scraper
+      - api
+    links:
+      - scraper
+      - api
+
+  mongo:
+    image: 'mongo:4-xenial'
+    ports:
+      - '27017:27017'
+    restart: always
+    command: --smallfiles

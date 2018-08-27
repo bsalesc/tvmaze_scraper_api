@@ -1,0 +1,4 @@
+/node_modules/
+!/data/db/.gitkeep
+/data/db/*
+docker-compose.prod.yml

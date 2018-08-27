@@ -1,0 +1,59 @@
+{
+  "name": "tvmazescraper-scraper",
+  "version": "1.0.0",
+  "description": "API that returns data from TvMaze.",
+  "main": "server.js",
+  "scripts": {
+    "build": "tsc",
+    "start:dev": "nodemon",
+    "start": "tsc && node ./dist/server.js",
+    "tslint": "./node_modules/.bin/tslint --project ./"
+  },
+  "dependencies": {
+    "log4js": "^3.0.5",
+    "mongoose": "^5.2.9",
+    "nconf": "^0.10.0",
+    "path": "^0.12.7",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "request-rate-limiter": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/log4js": "^2.3.5",
+    "@types/mongoose": "^5.2.7",
+    "@types/nconf": "0.0.37",
+    "@types/request": "^2.47.1",
+    "@types/request-promise": "^4.1.42",
+    "nodemon": "^1.18.3",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "**/*.spec.ts",
+      "src/server.ts",
+      "dist/"
+    ],
+    "reporter": [
+      "text"
+    ],
+    "all": true
+  },
+  "nodemonConfig": {
+    "verbose": true,
+    "restartable": "rs",
+    "ignore": [
+      "src/**/*.spec.ts"
+    ],
+    "watch": [
+      "src/"
+    ],
+    "exec": "ts-node src/server.ts",
+    "ext": "ts"
+  }
+}

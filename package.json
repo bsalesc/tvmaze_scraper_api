@@ -1,0 +1,25 @@
+{
+  "name": "tvmazescraper",
+  "version": "1.0.0",
+  "description": "Scraper and API to TvMaze.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunosalescardoso/tvmazescraper.git"
+  },
+  "author": "Bruno Sales Cardoso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunosalescardoso/tvmazescraper/issues"
+  },
+  "homepage": "https://github.com/brunosalescardoso/tvmazescraper#readme",
+  "devDependencies": {
+    "prettier": "^1.14.2",
+    "prettier-tslint": "^0.4.0",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1"
+  }
+}
