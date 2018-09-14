@@ -21,12 +21,12 @@ Accessing `http://localhost/api/shows?page=X` will get the list shows with casts
 
 Run tests: must access `./services/api/` and run script `npm run test`.
 
-## Hosted application
+## ~~Hosted application~~
 
-**Scraper to TvMaze**
+**~~Scraper to TvMaze~~**
 
-Accessing `http://tvmaze-epam5263.cloudapp.net/scraper/` will trigger the scraper.
+~~Accessing `http://tvmaze-epam5263.cloudapp.net/scraper/` will trigger the scraper.~~
 
-**RESTful API to Shows**
+**~~RESTful API to Shows~~**
 
-Accessing `http://tvmaze-epam5263.cloudapp.net/api/shows?page=X` will get the list shows with casts.
+~~Accessing `http://tvmaze-epam5263.cloudapp.net/api/shows?page=X` will get the list shows with casts.~~
